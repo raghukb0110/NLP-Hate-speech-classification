@@ -14,7 +14,7 @@
 ## How to run?
 
 ```bash
-conda create -n hate python=3.13 -y
+conda create -n hate python=3.12 -y
 ```
 
 ```bash

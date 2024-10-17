@@ -1,8 +1,7 @@
 from hate.logger import logging
 from hate.exception import CustomException
 import sys
+from hate.configuration.gcloud_syncer import GCloudSync
 
-try:
-    1 / 0  # This will raise a ZeroDivisionError
-except Exception as e:
-    raise CustomException(e, sys) from e
+obj = GCloudSync()
+obj.sync_folder_from_gcloud("hate_speech_classification_in", "dataset.zip", "download/dataset.zip")
